@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI SOC Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="header">
+
+        <h1>AI Security Operations Center</h1>
+
+        <p>
+            Simulate employee activity and monitor threats in real time.
+        </p>
+
+    </div>
+
+    <div class="tabs">
+
+        <div class="tab active-tab"
+             onclick="showTab('userTab', this)">
+
+            Employee Portal
+
+        </div>
+
+        <div class="tab"
+             onclick="showTab('socTab', this)">
+
+            SOC Dashboard
+
+        </div>
+
+    </div>
+
+    <!-- USER TAB -->
+
+    <div id="userTab" class="content">
+
+        <div class="card">
+
+            <h2>Employee Login</h2>
+
+            <input
+                id="username"
+                placeholder="Username">
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Password">
+
+            <button onclick="login()">
+                Login
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>File Upload</h2>
+
+            <input
+                id="filename"
+                placeholder="document.pdf">
+
+            <button onclick="uploadFile()">
+
+                Upload File
+
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Admin Resources</h2>
+
+            <button onclick="adminAccess()">
+
+                Access Admin Panel
+
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Network Utility</h2>
+
+            <button onclick="scanNetwork()">
+
+                Run Network Scan
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SOC TAB -->
+
+    <div id="socTab"
+         class="content hidden">
+
+        <div class="metrics">
+
+            <div class="metric-card">
+
+                <h3>Current User</h3>
+
+                <div id="currentUser">
+                    None
+                </div>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h3>Threat Count</h3>
+
+                <div id="threatCount">
+                    0
+                </div>
+
+            </div>
+
+            <div class="metric-card">
+
+                <h3>Risk Score</h3>
+
+                <div id="riskScore">
+                    0
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Active Threats</h2>
+
+            <div id="threatsContainer"></div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>AI Security Analysis</h2>
+
+            <div id="aiPanel"></div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Activity Timeline</h2>
+
+            <div id="timeline"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
